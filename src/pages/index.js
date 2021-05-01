@@ -10,7 +10,7 @@ import * as styles from '../styles/home.module.css'
 // This can be observed by inspecting the elements and looking at the classnames using dev tools
 export default function Home(props) {
 
-  // The props.data containes the graphql query response
+  // The props.data contains the graphql query response
   const { site } = props.data
   console.log(site.siteMetadata.title, site.siteMetadata.description)
 
@@ -44,3 +44,5 @@ export const query = graphql`
     }
   }
 `
+// Note that writing "query SiteInfo" or the name of the query is actually optional
+// It only becomes important for query variables 
