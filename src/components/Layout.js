@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import '../styles/global.css'
 
 // This Layout component is created to be able to reuse the same layout in every pages that needs it
 // Importing and calling the navbar component here allows you to display the navbar in all pages where it is used
@@ -8,17 +9,15 @@ import Navbar from './Navbar'
 export default function Layout(props) {
     const { children } = props
     return (
-        <div>
-            <header>
-                <Navbar />
-            </header>
+        <div className="layout">
+            <Navbar />
 
-            <content>
+            <div className="content">
                 {children}
-            </content>
+            </div>
 
             <footer>
-                Copyright Jerome Raymundo 2021
+                <p>Copyright Jerome Raymundo 2021</p>
             </footer>
         </div>
     )
