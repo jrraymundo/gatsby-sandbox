@@ -35,7 +35,7 @@ export default function Home(props) {
 // Calling graphql must use backticks or 'template literals' which should wrap the actual query to be exported
 // If the query is successful the data queried is returned and can be accessed via the component's props.data
 export const query = graphql`
-  query SiteInfo {
+  {
     site {
       siteMetadata {
         description
